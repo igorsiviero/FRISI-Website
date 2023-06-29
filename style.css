@@ -4,18 +4,15 @@
   scrollbar-width: thin;
   scrollbar-color: rgb(205, 205, 205) rgb(255, 255, 255);
   font-family: 'Coolvetica';
+  box-sizing: border-box;
 }
 
-h1 {
-
+html {
+  scroll-behavior: smooth;
 }
 
-h2 {
-
-}
-
-p {
-
+:target {
+  scroll-margin-top: 18.2rem;
 }
 
 *::-webkit-scrollbar {
@@ -163,9 +160,78 @@ header {
     margin: 15px 0;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: transform .2s;
   }
 
   /* Botão animação */
+
+  .CTA-Button:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+    color: var(--TextBlack);
+  }
+
+
+
+  .containerBtnAnimated {
+    position: relative;
+    width: 200px;
+    /* height: 400px; */
+    /* position: relative; */
+    /* left: 50%; */
+    /* top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center {
+    width: 180px;
+    height: 60px;
+    position: absolute;
+  }
+  
+  .btn {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+
+
+
 
 
 
@@ -213,11 +279,12 @@ header {
     height: 440px;
   }
 
-  .gradient-bg{
+  .gradient-bg {
     background: linear-gradient(180deg, var(--StrongPurple) 0%, rgba(255, 255, 255, 0.00) 64.58%);
     width: 100%;
     height: 100px;
   }
+
   
   .section-title {
     margin: 90px 0 90px 0;
@@ -281,7 +348,7 @@ header {
   }
 
   .skill {
-    margin: 30px;
+    margin: 30px 60px 60px 60px;
     padding: 30px;
     width: 25%;
     min-height: 450px;
@@ -306,6 +373,7 @@ header {
 
   .skill p {
     color: var(--TextBlack);
+    margin: 10px 0;
   }
 
   .skill p a {
@@ -394,12 +462,26 @@ header {
     width: 500px;
   }
 
-  .section-valores .valores2 {
-  }
-
   .section-valores .valores2 p {
     color: var(--EmphasisGold);
     font-size: 1.9rem;
+  }
+
+  .customized1 {
+    align-items: flex-end;
+    margin-bottom: 100px;
+  }
+
+  .customized-valores1 {
+    width: 30% !important;
+  }
+
+  .customized-valores1 img {
+    width: 440px !important;
+  }
+
+  .customized-width-valores2 {
+    width: 30% !important;
   }
 
   .bg-cta-2 {
@@ -449,4 +531,38 @@ header {
     width: 100px;
     margin-top: 380px;
     margin-right: 680px;
+  }
+
+  .gradient-bg-footer {
+    background: linear-gradient(0deg, var(--StrongPurple) 0%, rgba(255, 255, 255, 0.00) 64.58%);
+    width: 100%;
+    height: 100px;
+  }
+
+  .footer-container {
+    background-color: var(--StrongPurple);
+    color: var(--White);
+    width: 100%;
+    max-width: 100%;
+    padding: 2.5rem;
+
+  }
+
+  .footer-container .footer-title {
+    text-align: center;
+    font-size: 150px;
+    padding: 25px 0;
+  }
+
+  .footer-container ul {
+    text-align: left;
+    padding: 25px 0 25px 100px;
+  }
+
+  .footer-container ul li {
+    text-align: left;
+  }
+
+  .footer-container .footer-end {
+    text-align: center;
   }
